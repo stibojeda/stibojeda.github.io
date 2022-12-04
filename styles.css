@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -31,13 +35,15 @@ body {
 .introduction__heading h1 {
   font-size: 5rem;
   font-weight: 700;
-  color: #010101;
+  color: rgba(1, 1, 1, 0.9);
+  text-shadow: 0.2rem 0.2rem 5px rgba(240, 236, 226, 0.7);
 }
 
 .introduction__heading h3 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #F0ECE2;
+  text-shadow: 0.2rem 0.2rem 5px rgba(1, 1, 1, 0.6);
 }
 
 .introduction__navigation {
@@ -55,6 +61,10 @@ body {
   border-style: none;
   border-radius: 50%;
   background-color: #010101;
+}
+
+.introduction__button:hover {
+  background-color: #ACDBDF;
 }
 
 .introduction__button img {
@@ -99,9 +109,19 @@ body {
   max-width: 362px;
 }
 
-.creations__project h2 {
-  font-size: 48px;
+.creations__project a {
+  font-size: 2rem;
   font-weight: 700;
+  text-decoration: none;
+  color: #F0ECE2;
+}
+
+.creations__project a:hover {
+  color: #ACDBDF;
+}
+
+.creations__project a:focus {
+  color: #ACDBDF;
 }
 
 .creations__project p {
@@ -129,6 +149,11 @@ body {
   font-weight: 700;
   color: #010101;
   text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 5px rgba(240, 236, 226, 0.7);
+}
+
+.creations__all a:hover {
+  color: #ACDBDF;
 }
 
 /* Third section */
