@@ -72,6 +72,10 @@ body {
   height: 7.32vw;
 }
 
+.introduction__stiven {
+  display: none;
+}
+
 .introduction__description {
   grid-area: 3 / 1 / 4 / 2 ;
   width: 80%;
@@ -87,13 +91,16 @@ body {
 
 /* Second section */
 .creations {
+  padding: 1rem 1rem 0 1rem;
+  color: #F0ECE2;
+  background-color: #010101;
+}
+
+.creations__list {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
   justify-content: center;
-  padding: 1rem 1rem 0 1rem;
-  color: #F0ECE2;
-  background-color: #010101;
 }
 
 .creations__project {
@@ -105,11 +112,16 @@ body {
   color: #F0ECE2;
 }
 
-.creations__project img {
+.creations_project_unit {
   max-width: 362px;
 }
 
-.creations__project a {
+.creations__project img {
+  max-width: 362px;
+  border-radius: 2rem;
+}
+
+.creations__project h2 a {
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
@@ -138,7 +150,7 @@ body {
 .creations__all {
   border-radius: 30px 30px 0 0;
   padding: 0.8rem;
-  max-width: 450px;
+  max-width: 250px;
   margin: 0 auto;
   text-align: center;
   background-color: #69779B;
@@ -158,12 +170,15 @@ body {
 
 /* Third section */
 .stiven {
+  padding: 1rem;
+  background-color: #69779B;
+}
+
+.stiven__information {
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 1rem;
-  padding: 1rem;
-  background-color: #69779B;
 }
 
 .stiven h2 {
@@ -174,9 +189,32 @@ body {
   color: #F0ECE2;
 }
 
+.stiven__container {
+  position: relative;
+  max-width: 350px;
+  max-height: 350px;
+}
+
 .stiven img {
   margin: 0 auto;
   max-width: 350px;
+}
+
+.stiven_person_text,
+.stiven_study_text,
+.stiven_work_text
+{
+  /* display: none; */
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  width: 100%;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 500;  
+  text-align: center;
+  color: #010101;
+  text-shadow: 0.1rem 0.1rem 3px #F0ECE2;
 }
 
 /* Fourth section */
@@ -209,6 +247,27 @@ body {
   margin: 1rem;
 }
 
+.contact__form input,
+.contact__form textarea
+{
+  width: 250px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #010101;
+  border-radius: 5px;
+}
+
+.contact__form textarea {
+  color: #010101;
+}
+
+.contact_form_submit input{
+  font-size: 1.2rem;
+  border-style: none;
+  border: 2px solid #F0ECE2;
+  background-color: #69779B;
+}
+
 /* Footer */
 footer {
   padding: 1rem;
@@ -225,14 +284,243 @@ footer p {
 
 
 @media (min-width: 900px) {
+
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: 1.17vw;
+  }
+
+  /* First section */
+
   .introduction {
+    display: grid;
+    grid-template-columns: auto 43vw;
+    grid-template-rows: auto auto;
+    height: 100vh;
+    padding: 0;
+    /* padding: 4.39vw 4.39vw 0 4.39vw; */
+    background-color: #69779B;
+  }
+
+  .introduction__heading {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.66vw;
+    margin: 4.39vw 0 0 4.39vw;
+    text-align: left;
+  }
+
+  .introduction__heading h1 {
+    font-size: 9.37vw;
+  }
+  
+  .introduction__heading h3 {
+    font-size: 2.93vw;
+    font-weight: 500;
+  }
+
+  .introduction__navigation {
+    grid-area: 1 / 2 / 2 / 3 ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2.20vw;
+    margin: 0;
+    margin-right: 35.58vw;
+    min-width: 7.32vw;
+  }
+
+  .introduction__button {
+    max-width: 7.32vw;
+    max-height: 7.32vw;
+    padding: 1.83vw;
+    border-style: none;
+    border-radius: 50%;
+    background-color: #010101;
+  }
+
+  .introduction__button img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .introduction__stiven {
+    grid-area: 1 / 2 / 3 / 3;
+    display: block;
+    position: absolute;
+    min-width: 42vw;
+    height: 100%;
+    right: 0;
+  }
+
+  .introduction__description {
+    position: relative;
+    grid-area: 2 / 1 / 3 / 2 ;
+    bottom: 0;
+    width: 58.57vw;
+    margin: 0;
+    margin-top: auto;
+    padding: 1.54vw 4.39vw 1.54vw 4.39vw;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 400;
+    color: #F0ECE2;
+    border-radius: 0 2.20vw 0 0;
+    background-color: #010101;
+  }
+
+  /* Second section */
+  .creations {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 100vh;
+    padding: 3vw 4.39vw 0 4.39vw;
+  }
+
+  .creations__list {
+    display: flex;
+    flex-direction: row;
+    row-gap: 2rem;
+    justify-content: center;
+    margin-bottom: auto;
+  }
+
+  .creations__project img {
+    max-width: 26.5vw;
+  }
+
+  .creations__all {
+    padding: 1.46vw;
+    min-width: 29.3vw;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 2.20vw 2.20vw 0 0;
     background-color: #69779B;
   }
   
-  .introduction__heading {
+  .creations__all a {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #010101;
+    text-decoration: none;
+    text-shadow: 0.1rem 0.1rem 5px rgba(240, 236, 226, 0.7);
+  }
+
+  /* Third section */
+  .stiven {
+    height: 100vh;
+    padding: 4.39vw;
+    background-color: #69779B;
+  }
+
+  .stiven__information {
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2rem;
   }
   
+  .stiven h2 {
+    margin: 4.39vw auto 3.66vw;
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+    color: #F0ECE2;
+  }
+  
+  .stiven__container {
+    position: relative;
+    width: 25.6vw;
+    min-width: 25vw;
+    height: 25.6vw;
+    min-height: 25vw;
+  }
+  
+  .stiven img {
+    margin: 0 auto;
+    min-width: 25vw;
+  }
+
+  /* Fourth section */
+  .contact {
+    display: grid;
+    grid-template-columns: auto 38.6vw;
+    grid-template-rows: auto auto;
+    padding: 4.39vw;
+    text-align: center;
+    background-color: #010101;
+  }
+  
+  .contact h2 {
+    grid-area: 1 / 1 / 2 / 3 ;
+    margin-top: 4.39vw;
+    font-size: 3rem;
+  }
+  
+  .contact__information {
+    grid-area: 2 / 1 / 3 / 2 ;
+    text-align: left;
+    color: #F0ECE2;
+  }
+
+  .contact__information h4 {
+    margin: 1.46vw 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .contact__information p {
+    margin: 0.73vw 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .contact__icons img {
+    min-width: 3.66vw;
+  }
+
+  .contact__form {
+    grid-area: 2 / 2 / 3 / 3 ;
+    width: 38.6vw;
+    margin: 1.46vw 0;
+  }
+  
+  .contact__form input,
+  .contact__form textarea
+  {
+    width: 38.6vw;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #010101;
+    border-radius: 0.73vw;
+  }
+  
+  .contact_form_submit input{
+    font-size: 2rem;
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.78vw 4.39vw;
+  }
+  
+  footer p {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .footer__icons img {
+    min-width: 1.25rem;
+  }
+
+
 }

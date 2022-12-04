@@ -17,6 +17,7 @@
       <h1>Stiven<br>Ojeda</h1>
       <h3>Frontend Web Developer</h3>
     </header>
+    <img class="introduction__stiven" src="images/photos/stiven-ojeda.png">
     <div class="introduction__navigation">
       <a href="#creations" class="introduction__button">
         <img src="images/icons/code-icon.svg" alt="HTML code tag icon.">
@@ -28,6 +29,7 @@
         <img src="images/icons/phone-icon.svg" alt="Phone icon.">
       </a>
     </div>
+    
     <p class="introduction__description" id="text_description">
       I am a colombian web developer with a willingness to learn about web development and technology.
     </p>
@@ -35,36 +37,44 @@
   
   <!-- Second section: portfolio and gallery of projects. -->
   <div class="creations" id="creations" >
-    <section class="creations__project">
-      <img src="images/imagesProject1.png" alt="Image of the project 1.">
-      <h2><a href="https://stibojeda.github.io/product-preview-card-component/" target="_blank">Product preview card component</a></h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Arcu massa magna tincidunt non nisl imperdiet adipiscing. Pellentesque vulputate ipsum etiam duis aenean ullamcorper.</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </section>
-
-    <section class="creations__project">
-      <img src="images/imagesProject2.png" alt="Image of the project 2.">
-      <h2><a href="https://stibojeda.github.io/interactive-rating-component/" target="_blank">Interactive rating component</a> </h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Arcu massa magna tincidunt non nisl imperdiet adipiscing. Pellentesque vulputate ipsum etiam duis aenean ullamcorper.</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-    </section>
-
-    <section class="creations__project">
-      <img src="images/imagesProject3.png" alt="Image of the project 3.">
-      <h2><a href="#" target="_blank">Project 3</a></h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Arcu massa magna tincidunt non nisl imperdiet adipiscing. Pellentesque vulputate ipsum etiam duis aenean ullamcorper.</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </section>
+    
+    <div class="creations__list">
+      <section class="creations__project">
+        <img src="images/product-preview-card-component.png" alt="Screenshot of Product preview card component.">
+        <h2><a href="https://stibojeda.github.io/product-preview-card-component/" target="_blank">Product preview card component</a></h2>
+        <p>
+          Product preview card component created using HTML & CSS for frontendmentor.io . This is a solution to the Product preview card component challenge on Frontend Mentor.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </section>
+  
+      <section class="creations__project">
+        <img src="images/interactive-rating-component.png" alt="Image of interactive rating component.">
+        <h2><a href="https://stibojeda.github.io/interactive-rating-component/" target="_blank">Interactive rating component</a> </h2>
+        <p>
+          Interactive rating component created using HTML, CSS & JavaScript for frontendmentor.io . This is a solution to the Interactive rating component challenge on Frontend Mentor.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+  
+      <section class="creations__project">
+        <img src="images/imagesProject3.png" alt="Image of the project 3.">
+        <h2><a href="#" target="_blank">Project 3</a></h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Arcu massa magna tincidunt non nisl imperdiet adipiscing. Pellentesque vulputate ipsum etiam duis aenean ullamcorper.</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </section>
+    </div>
+    
     <div class="creations__all">
       <a href="#">See more projects</a>
     </div>
@@ -73,26 +83,51 @@
   <!-- Third section: about me section; personal information about Stiven. -->
   <section class="stiven" id="stiven" >
     <h2>Stiven Ojeda</h2>
-    <img src="images/child.png" alt="Child image.">
-    <img src="images/books.png" alt="Books image.">
-    <img src="images/computer-hands.png" alt="Work in programming image.">
+
+    <div class="stiven__information">
+      <div class="stiven__container">
+        <img class="stiven__person" src="images/child.png" alt="Child image.">
+        <p class="stiven_person_text">
+          This is personal information.
+        </p>
+      </div>
+      <div class="stiven__container">
+        <img class="stiven__study" src="images/books.png" alt="Books image.">
+        <p class="stiven_study_text">
+          This is studying information.
+        </p>
+      </div>
+      <div class="stiven__container">
+        <img class="stiven__work" src="images/computer-hands.png" alt="Work in programming image.">
+        <p class="stiven_work_text">
+          This is working information.
+        </p>
+      </div>
+    </div>
+    
   </section>
 
   <!-- Fourth section: contact information and social networks. -->
-  <section class="contact" id="contact" >
+  <section class="contact">
     <h2>Contact Me</h2>
     <div class="contact__information">
       <h4>Social Networks</h4>
       <p>linkedin.com/stibojeda</p>
       <p>instagram.com/notinstagramyet</p>
       <div class="contact__icons">
-        <img src="images/icons/linkedin-icon.svg" alt="Linkedin icon.">
-        <img src="images/icons/instagram-icon.svg" alt="Instagram icon.">
+        <a href="#">
+          <img src="images/icons/linkedin-icon.svg" alt="Linkedin icon.">
+        </a>
+        <a href="https://github.com/stibojeda">
+          <img src="images/icons/github-icon.svg" alt="GitHub icon.">
+        </a>
+        <a href="#">
+          <img src="images/icons/instagram-icon.svg" alt="Instagram icon.">
+        </a>
       </div>
     </div>
     
-
-    <form class="contact__form">
+    <form class="contact__form" id="contact">
       <div class="contact__form">
         <input type="email" placeholder="Email" id="email" required>
       </div>
@@ -101,19 +136,29 @@
       </div>
       <div class="contact__form">
         <textarea name="message">
-          Your message
+          Write here your message.
         </textarea>
       </div>
-      
+      <div class="contact__form contact_form_submit">
+        <input type="submit" value="Send">
+      </div>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Stiven&#39s Web Development Portfolio by Stiven Ojeda</p>
+    <p>Stiven&#39s Web Development Portfolio by Stiven Ojeda. 2022.</p>
     <div class="footer__icons">
-      <img src="images/icons/little-instagram-icon.svg" alt="Instagram icon.">
-      <img src="images/icons/little-linkedin-icon.svg" alt="Linkedin icon.">
+      <a href="#">
+        <img src="images/icons/little-linkedin-icon.svg" alt="Linkedin icon.">
+      </a>
+      <a href="https://github.com/stibojeda">
+        <img src="images/icons/little-github-icon.svg" alt="GitHub icon.">
+      </a>
+      <a href="#">
+        <img src="images/icons/little-instagram-icon.svg" alt="Instagram icon.">
+      </a>
+      
     </div>
   </footer>
 </body>
