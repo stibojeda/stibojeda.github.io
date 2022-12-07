@@ -112,9 +112,9 @@ body {
   color: #F0ECE2;
 }
 
-.creations_project_unit {
+/* .creations_project_unit {
   max-width: 362px;
-}
+} */
 
 .creations__project img {
   max-width: 362px;
@@ -208,7 +208,9 @@ body {
   position: absolute;
   z-index: 10;
   top: 50%;
+  transform: translateY(-50%);
   width: 100%;
+  padding: 1rem;
   border-radius: 50%;
   font-size: 1rem;
   font-weight: 500;  
@@ -521,6 +523,5 @@ footer p {
   .footer__icons img {
     min-width: 1.25rem;
   }
-
 
 }
