@@ -13,8 +13,16 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-/* First section */
+/* Home Button */
+.home__button {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 
+}
 
+/* First section */
 .introduction {
   display: grid;
   grid-template-columns: auto;
@@ -107,6 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  min-width: 362px;
   padding: 20px;
   color: #F0ECE2;
 }
@@ -116,6 +125,7 @@ body {
 } */
 
 .creations__project img {
+  width: 100%;
   max-width: 362px;
   border-radius: 2rem;
 }
@@ -282,6 +292,10 @@ footer p {
   font-weight: 500;
 }
 
+.footer__icons {
+  margin-right: 2rem;
+}
+
 
 
 @media (min-width: 900px) {
@@ -290,6 +304,11 @@ footer p {
     padding: 0;
     margin: 0;
     font-size: 1.17vw;
+  }
+  
+  /* Home Button */
+  .home__button {
+    display: block;
   }
 
   /* First section */
@@ -380,25 +399,36 @@ footer p {
     flex-direction: column;
     align-content: space-between;
     height: 100vh;
-    padding: 3vw 4.39vw 0 4.39vw;
+    padding: 1.54vw 4.39vw 0 4.39vw;
   }
 
   .creations__list {
     display: flex;
     flex-direction: row;
-    row-gap: 2rem;
-    justify-content: center;
-    margin-bottom: auto;
+    padding: 0;
+    align-content: space-between;
+  }
+
+  .creations__project {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.46vw;
+    max-width: 29.5vw;
+    height: 100%;
+    padding: 1.46vw;
+    color: #F0ECE2;
   }
 
   .creations__project img {
+    width: 100%;
     max-width: 26.5vw;
   }
 
   .creations__all {
     padding: 1.46vw;
     min-width: 29.3vw;
-    margin: 0 auto;
+    margin: auto;
+    margin-bottom: 0;
     text-align: center;
     border-radius: 2.20vw 2.20vw 0 0;
     background-color: #69779B;
@@ -416,7 +446,7 @@ footer p {
   /* Third section */
   .stiven {
     height: 100vh;
-    padding: 4.39vw;
+    padding: 1vw 4.39vw;
     background-color: #69779B;
   }
 
