@@ -106,7 +106,6 @@ body {
 .creations__project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   row-gap: 20px;
   padding: 20px;
   color: #F0ECE2;

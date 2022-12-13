@@ -22,9 +22,15 @@ body {
   color: #F0ECE2;
 }
 
-.tittle span {
+.tittle span a{
   font-size: 4rem;
   font-weight: 700;
+  text-decoration: none;
+  color: #F0ECE2;
+}
+
+.tittle span a:hover {
+  color: #ACDBDF;
 }
 
 /* Portfolio */
@@ -48,7 +54,6 @@ body {
 .portfolio__project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   row-gap: 20px;
   padding: 20px;
   color: #F0ECE2;
